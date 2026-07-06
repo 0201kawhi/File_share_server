@@ -21,7 +21,7 @@ graph TD
         C2[Client 2]
     end
 
-    subgraph Server Space (Port 8888)
+    subgraph "Server Space (Port 8888)"
         S[TCP Listening Socket]
         TH1[Connection Handler Thread 1]
         TH2[Connection Handler Thread 2]
