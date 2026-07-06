@@ -12,35 +12,6 @@
 
 ---
 
-## 🏗️ 系統架構
-
-```mermaid
-graph TD
-    subgraph Client Space
-        C1[Client 1]
-        C2[Client 2]
-    end
-
-    subgraph "Server Space (Port 8888)"
-        S[TCP Listening Socket]
-        TH1[Connection Handler Thread 1]
-        TH2[Connection Handler Thread 2]
-        FL[(Shared Filelist Metadata)]
-        FS[Physical Files]
-    end
-
-    C1 -->|Connect| S
-    C2 -->|Connect| S
-    S -->|pthread_create| TH1
-    S -->|pthread_create| TH2
-    TH1 -->|Read/Write/Lock| FL
-    TH2 -->|Read/Write/Lock| FL
-    TH1 -->|Read/Write Content| FS
-    TH2 -->|Read/Write Content| FS
-```
-
----
-
 ## 📂 檔案目錄結構
 
 ```text
