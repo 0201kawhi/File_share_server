@@ -1,0 +1,24 @@
+# Compiled Binaries
+server/server
+client/client
+*.out
+*.exe
+*.o
+*.obj
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Runtime test files and client downloads
+# (The client downloads files to the directory it is run from, and the server creates files in its directory)
+*.txt
+!test.txt
+!client/test.txt
+!server/test.txt
